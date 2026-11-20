@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Panel · Madelane Nails</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#faf6f9">
+<meta name="theme-color" content="#F6F1F8">
 <link rel="icon" type="image/png" href="imagenes/favicon.png">
 <link rel="apple-touch-icon" href="imagenes/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
---canvas:#faf6f9;--surface:#fff;--soft:#f2eaf2;--hairline:#e7dde6;--field:#d9ccd8;
---ink:#271f2b;--stone:#5a4c5f;--ash:#8b8090;
---plum:#76607b;--plum-deep:#4b3a50;--lav:#c09dcb;--lav-pale:#efe3f2;
+--canvas:#F6F1F8;--surface:#fff;--soft:#f2eaf2;--hairline:#E2D6E8;--field:#d9ccd8;
+--ink:#2E2233;--stone:#6A5C70;--ash:#8b8090;
+--plum:#5E4466;--plum-deep:#4B3652;--lav:#B48CC4;--lav-pale:#efe3f2;
 --wa:#25a244;--error:#c2362b;--err-bg:#fbecea;
 --pend:#9a5b12;--pend-bg:#fdf1de;--conf:#2f7a47;--conf-bg:#e5f3e9;--canc:#8b8090;--canc-bg:#efecef;--done:#3d5d8f;--done-bg:#e6edf7;
---serif:'Newsreader','Iowan Old Style',Georgia,serif;--sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif}
+--serif:'Epilogue',system-ui,-apple-system,'Segoe UI',sans-serif;--sans:'Epilogue',system-ui,-apple-system,'Segoe UI',sans-serif}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--canvas);color:var(--ink);font:400 16px/1.5 var(--sans);overflow-x:clip}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--canvas);z-index:41}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.15}
+h1,h2,h3{font-family:var(--serif);font-weight:800;letter-spacing:-.035em;margin:0;line-height:1.05}
 button,input,select,textarea{font:inherit;color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1.5px solid transparent;border-radius:9999px;background:var(--plum);color:#fff;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;white-space:nowrap}
@@ -37,7 +37,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:va
 header .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
 .logo{margin-right:auto;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--plum-deep)}
 .logo img{height:44px;width:auto;display:block}
-.logo span{font:400 20px/1 var(--serif)}
+.logo span{font:700 18px/1 var(--serif);letter-spacing:-.02em}
 .logo small{display:block;font:700 10px/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--plum);margin-top:4px}
 .tabs{display:flex;gap:4px;padding-block:12px 0;overflow-x:auto}
 .tabs button{border:0;background:none;padding:10px 16px;border-radius:9999px;color:var(--stone);font-weight:600;cursor:pointer;white-space:nowrap}
@@ -59,7 +59,7 @@ textarea.i{min-height:76px;resize:vertical}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:20px}
 .stat{background:var(--surface);border:1px solid var(--hairline);border-radius:18px;padding:16px 18px;min-width:0;text-align:left;cursor:pointer}
 .stat:hover{border-color:var(--plum)}
-.stat b{display:block;font:300 38px/1 var(--serif);color:var(--plum);font-variant-numeric:tabular-nums}
+.stat b{display:block;font:800 38px/1 var(--serif);letter-spacing:-.03em;color:var(--plum);font-variant-numeric:tabular-nums}
 .stat span{font-size:14px;color:var(--stone)}
 .stat.warn b{color:var(--pend)}
 .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
@@ -69,14 +69,14 @@ textarea.i{min-height:76px;resize:vertical}
 .chk{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--stone);cursor:pointer}
 .chk input{width:18px;height:18px;accent-color:var(--plum)}
 /* lista de citas */
-.day{margin:26px 0 10px;display:flex;align-items:baseline;gap:10px;font:400 22px/1.2 var(--serif)}
+.day{margin:26px 0 10px;display:flex;align-items:baseline;gap:10px;font:800 22px/1.2 var(--serif);letter-spacing:-.03em}
 .day small{font:600 13px/1 var(--sans);color:var(--ash)}
 .day .tg{font:700 11px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--plum);padding:5px 9px;border-radius:99px}
 .ap{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--hairline);border-radius:18px;padding:16px 18px;margin-bottom:10px}
 .ap.st-pendiente{border-left:4px solid #e0a54b}
 .ap.st-confirmada{border-left:4px solid var(--conf)}
 .ap.st-cancelada,.ap.st-no_asistio{opacity:.7}
-.ap .tm{font:400 22px/1.1 var(--serif);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ap .tm{font:800 22px/1.1 var(--serif);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
 .ap .tm small{display:block;font:500 13px/1.3 var(--sans);color:var(--ash);margin-top:4px}
 .ap .who{min-width:0}
 .ap .nm{font-weight:700;font-size:17px;overflow-wrap:anywhere}
@@ -125,7 +125,7 @@ textarea.i{min-height:76px;resize:vertical}
 .mcal{position:sticky;top:130px}
 @media(max-width:900px){.ag{grid-template-columns:1fr}.mcal{position:static}}
 .mh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
-.mh b{font:400 24px/1 var(--serif)}
+.mh b{font:800 24px/1 var(--serif);letter-spacing:-.03em}
 .mh .btn{width:44px;padding:0;font-size:20px}
 .mg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .mw{font:700 11px/1.2 var(--sans);letter-spacing:.5px;text-transform:uppercase;color:var(--ash);text-align:center;padding:2px 0 4px}
