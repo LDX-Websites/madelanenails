@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Madelane Nails · Diseño 2 · Gloss</title>
+<meta name="theme-color" content="#1E1023">
+<link rel="icon" href="/imagenes/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;1,500;1,600&family=Inter+Tight:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --night:#1E1023; --night-2:#2A1631; --plum:#3A1F42; --lilac:#C9A6D6; --text:#F5EEF7; --muted:#BBA8C2; --line:rgba(245,238,247,.14);
+  --chrome:linear-gradient(100deg,#B79AC2 0%,#F7F0FA 22%,#9C82A6 40%,#FFFFFF 52%,#B79AC2 70%,#EDE2F1 100%);
+  --d:'Bodoni Moda',Didot,serif; --b:'Inter Tight',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--b);font-weight:300;font-size:17px;line-height:1.65;color:var(--text);background:var(--night);-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-family:var(--d);font-weight:500;font-style:italic;letter-spacing:-.02em;line-height:1}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--lilac);outline-offset:4px;border-radius:6px}
+
+.top{position:absolute;inset:0 0 auto;z-index:10}
+.top-in{display:flex;align-items:center;gap:28px;min-height:88px}
+.brand{font-family:var(--d);font-style:italic;font-size:26px;text-decoration:none;letter-spacing:-.01em}
+.brand span{font-family:var(--b);font-style:normal;font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;letter-spacing:.02em}
+.nav{display:flex;gap:26px;margin-left:auto;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;font-weight:500;font-size:15.5px;text-decoration:none;border:1px solid transparent;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-chrome{background:var(--chrome);background-size:200% 100%;color:var(--night);font-weight:600}
+.btn-line{border-color:var(--line)}
+.btn-line:hover{border-color:var(--text)}
+.top .btn{min-height:44px;padding:0 22px;font-size:14.5px}
+
+/* Texto cromado con reflejo que pasa */
+.chrome{background:var(--chrome);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Hero */
+.hero{position:relative;padding:150px 0 110px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;width:720px;height:720px;left:-200px;top:-260px;border-radius:50%;background:radial-gradient(closest-side,rgba(201,166,214,.22),transparent);z-index:-1}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:60px;align-items:end}
+.hero h1{font-size:clamp(60px,9vw,148px);line-height:.92}
+.hero .lead{color:var(--muted);font-size:clamp(17px,1.4vw,19px);max-width:30em;margin-top:28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:40px;font-size:14px;color:var(--muted);list-style:none;padding:0}
+.meta b{color:var(--text);font-weight:500}
+
+/* Fotos: se revelan como una pincelada y brillan como gel recién curado */
+.shot{position:relative;margin:0;border-radius:200px 200px 26px 26px;overflow:hidden;background:var(--plum)}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot::after{content:"";position:absolute;inset:-20%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 48%,rgba(255,255,255,.08) 52%,transparent 60%);transform:translateX(-80%);pointer-events:none}
+.hero .shot{aspect-ratio:3/4}
+.brush img{clip-path:inset(0 100% 0 0 round 0 999px 999px 0)}
+.brush.in img{clip-path:inset(0 0 0 0 round 0);transition:clip-path 1.4s cubic-bezier(.65,0,.2,1)}
+
+.sec{padding:120px 0}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(46px,6vw,92px)}
+.sec-head p{color:var(--muted);max-width:28em}
+
+/* Galería editorial */
+.gal{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:20px;align-items:start}
+.gal .shot{border-radius:22px}
+.gal .shot:nth-child(1){aspect-ratio:3/4}
+.gal .shot:nth-child(2){aspect-ratio:4/5;margin-top:90px}
+.gal .shot:nth-child(3){aspect-ratio:3/4;margin-top:30px}
+.gal figcaption{position:absolute;left:18px;bottom:16px;font-family:var(--d);font-style:italic;font-size:22px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+
+/* Carta con puntos */
+.carta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 70px;list-style:none;margin:0;padding:0}
+.carta li a{display:block;padding:22px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.carta .row{display:flex;align-items:baseline;gap:14px}
+.carta .nm{font-family:var(--d);font-style:italic;font-size:26px;line-height:1.15}
+.carta .dots{flex:1;border-bottom:1px dotted rgba(245,238,247,.35);transform:translateY(-6px)}
+.carta .pr{font-family:var(--d);font-size:30px;font-weight:600}
+.carta .ds{display:block;color:var(--muted);font-size:15px;margin-top:6px}
+.carta .k{font-family:var(--b);font-style:normal;font-size:12px;color:var(--lilac);margin-left:8px;vertical-align:middle}
+.carta a:hover .nm{color:var(--lilac)}
+.fine{margin-top:26px;font-size:14.5px;color:var(--muted)}
+.extras{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;list-style:none;padding:0}
+.extras li{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:14.5px;color:var(--muted)}
+.extras b{color:var(--text);font-weight:500}
+
+/* Por qué y pasos */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;list-style:none;margin:0;padding:0}
+.why li{border-top:1px solid var(--line);padding-top:26px}
+.why h3{font-size:30px;margin-bottom:12px}
+.why p{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:60px 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--night-2);border:1px solid var(--line);border-radius:26px;padding:30px}
+.steps li::before{content:counter(s);display:block;font-family:var(--d);font-style:italic;font-size:56px;line-height:1;margin-bottom:18px;background:var(--chrome);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.steps h3{font-family:var(--b);font-style:normal;font-weight:500;font-size:19px;letter-spacing:0}
+.steps p{color:var(--muted);margin-top:8px;font-size:15.5px}
+
+/* Cierre */
+.close{position:relative;text-align:center;padding:150px 20px;overflow:hidden;isolation:isolate;border-top:1px solid var(--line)}
+.close::before{content:"";position:absolute;inset:auto -10% -40% -10%;height:80%;background:radial-gradient(ellipse at center,rgba(201,166,214,.22),transparent 65%);z-index:-1}
+.close h2{font-size:clamp(54px,8vw,130px);max-width:12ch;margin:0 auto}
+.close p{color:var(--muted);margin:22px auto 0;max-width:30em}
+.close .ctas{justify-content:center}
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;margin-top:40px;font-size:15px;color:var(--muted);list-style:none;padding:0}
+.contact a{color:var(--text);text-decoration:none}
+
+.foot{border-top:1px solid var(--line);padding:34px 0 110px;font-size:14px;color:var(--muted)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;align-items:center}
+.foot-in nav{display:flex;gap:18px}
+.ldx-sig{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none}
+.ldx-logo{display:inline-flex;align-items:center;gap:1px;font-family:var(--b);font-weight:700;color:#fff;letter-spacing:-.02em}
+.ldx-logo svg{width:12px;height:12px}
+.concept{position:fixed;left:16px;bottom:16px;z-index:30;display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(42,22,49,.85);backdrop-filter:blur(10px);border:1px solid var(--line)}
+.concept a{color:var(--text);text-decoration:none;font-size:13px;font-weight:500;padding:7px 12px;border-radius:999px}
+.concept a[aria-current]{background:var(--text);color:var(--night)}
+
+@media (prefers-reduced-motion:no-preference){
+  .chrome,.btn-chrome,.steps li::before{animation:sheen 7s ease-in-out infinite}
+  @keyframes sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  .hero .shot::after{animation:gloss 5s ease-in-out 1.2s infinite}
+  .gal .shot:hover::after{animation:gloss 1.1s ease-out}
+  @keyframes gloss{0%{transform:translateX(-80%)}45%,100%{transform:translateX(80%)}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.brush img{clip-path:none}}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .hero .shot{max-width:400px;aspect-ratio:4/5}
+  .carta{grid-template-columns:1fr}
+  .why,.steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .brand span{display:none}
+  .sec{padding:84px 0}
+  .hero{padding:120px 0 80px}
+  .gal{grid-template-columns:1fr 1fr}
+  .gal .shot:nth-child(2){margin-top:50px}
+  .gal .shot:nth-child(3){grid-column:1/-1;aspect-ratio:4/3;margin-top:0}
+  .ctas .btn{width:100%}
+  .carta .nm{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#">Madelane Nails<span>Pampatar</span></a>
+    <nav class="nav" aria-label="Menú"><a href="#trabajos">Trabajos</a><a href="#carta">Precios</a><a href="#como">Cómo agendar</a></nav>
+    <a class="btn btn-chrome" href="/reservar">Agendar cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1 class="chrome">Brillo que dura semanas.</h1>
+      <p class="lead">Semipermanente, rubber, polygel y softgel con cutícula en seco y mucho detalle. Manicura con cita previa en Pampatar, Isla de Margarita.</p>
+      <div class="ctas"><a class="btn btn-chrome" href="/reservar">Agendar mi cita</a><a class="btn btn-line" href="#carta">Ver precios</a></div>
+      <ul class="meta"><li>Desde <b>$8</b></li><li><b>Cutícula en seco</b>, sin remojo</li><li>Opción <b>vegana</b></li></ul>
+    </div>
+    <figure class="shot brush"><img src="../img/rojo-gato-1000.webp" width="1000" height="1298" alt="Uñas rojas con efecto ojo de gato hechas por Madelane"></figure>
+  </div>
+</section>
+
+<section class="sec" id="trabajos" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Recién hechas</h2><p>Trabajos reales de clientas. Hay más en <a href="https://www.instagram.com/madelane.nails">Instagram @madelane.nails</a>.</p></div>
+    <div class="gal">
+      <figure class="shot brush"><img loading="lazy" src="../img/vino-1000.webp" width="1000" height="1484" alt="Uñas color vino en forma almendra"><figcaption>Vino</figcaption></figure>
+      <figure class="shot brush"><img loading="lazy" src="../img/milky-1000.webp" width="1000" height="1484" alt="Uñas milky en forma almendra"><figcaption>Milky</figcaption></figure>
+      <figure class="shot brush"><img loading="lazy" src="../img/chocolate-1000.webp" width="1000" height="1298" alt="Uñas color chocolate brillante"><figcaption>Chocolate</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="carta">
+  <div class="wrap">
+    <div class="sec-head"><h2>La carta</h2><p>Cada servicio incluye limpieza de cutículas sin remojo, limado y esmaltado. Toca uno para agendarlo.</p></div>
+    <ul class="carta" id="carta-list"></ul>
+    <p class="fine">Precios en dólares, a tasa BCV del día de tu cita.</p>
+    <ul class="extras"><li>Solo limpieza y limado <b>$3</b></li><li>Reparación o alargamiento de uña <b>$1</b></li><li>Retiro de esmalte <b>$1</b></li><li>Diseños y efectos <b>$1–2</b></li></ul>
+  </div>
+</section>
+
+<section class="sec" id="como" style="padding-top:20px">
+  <div class="wrap">
+    <ul class="why">
+      <li><h3>Cutícula en seco</h3><p>Sin remojo, para un acabado más limpio y un esmalte que dura más.</p></li>
+      <li><h3>Todo incluido</h3><p>Limpieza, limado y esmaltado en cada servicio. Sin cargos sorpresa.</p></li>
+      <li><h3>Solo para ti</h3><p>Atiendo con cita previa, así tu turno es tuyo y sin apuros.</p></li>
+    </ul>
+    <ol class="steps">
+      <li><h3>Elige día y hora</h3><p>Escoge tu servicio y un cupo libre en la <a href="/reservar">agenda en línea</a>.</p></li>
+      <li><h3>Te confirmo</h3><p>Te escribo por WhatsApp y te llega un correo con los detalles.</p></li>
+      <li><h3>Recibe la ubicación</h3><p>Al confirmar, te envío la ubicación exacta en Pampatar.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="close">
+  <h2 class="chrome">Tu próximo brillo empieza aquí.</h2>
+  <p>Agenda en línea en un minuto o escríbeme y te ayudo a elegir tono y técnica.</p>
+  <div class="ctas"><a class="btn btn-chrome" href="/reservar">Agendar mi cita</a><a class="btn btn-line" href="https://wa.me/584141887538">Escribir por WhatsApp</a></div>
+  <ul class="contact"><li>WhatsApp <a href="https://wa.me/584141887538">0414-1887538</a></li><li>Instagram <a href="https://www.instagram.com/madelane.nails">@madelane.nails</a></li><li>Pampatar, Isla de Margarita</li></ul>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 Madelane Nails · Manicurista en Pampatar</span>
+    <nav><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></nav>
+    <a class="ldx-sig" href="https://ldxwebsites.com" target="_blank" rel="noopener" aria-label="Diseñado por LDX">Diseñado por <span class="ldx-logo">LD<svg viewBox="0 0 170 170" aria-hidden="true"><line x1="22" y1="22" x2="148" y2="148" stroke="currentColor" stroke-width="34" stroke-linecap="square"/><line x1="148" y1="22" x2="22" y2="148" stroke="#D4A84B" stroke-width="34" stroke-linecap="square"/></svg></span></a>
+  </div>
+</footer>
+
+<nav class="concept" aria-label="Diseños"><a href="../">Ver todos</a><a href="../1/">1</a><a href="../2/" aria-current="page">2</a><a href="../3/">3</a></nav>
+
+<script>
+(function(){
+  // Pincelada: cada foto se revela al aparecer
+  var shots=document.querySelectorAll('.brush');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)){ shots.forEach(function(s){ s.classList.add('in'); }); }
+  else { var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.2}); shots.forEach(function(s){ io.observe(s); }); }
+  // Carta de servicios (los precios reales vienen del sistema de citas)
+  var S=[
+    {n:'Esmalte semipermanente de manos',p:8,k:'',d:'Color brillante y duradero que no se descascara en semanas.'},
+    {n:'Esmalte semipermanente de pies',p:8,k:'',d:'El mismo acabado duradero, para unos pies impecables.'},
+    {n:'Nivelación rubber',p:10,k:'',d:'Base flexible que nivela y refuerza tu uña natural.'},
+    {n:'Aplicación de polygel',p:12,k:'',d:'Uñas reforzadas o alargadas, moldeadas a tu gusto.'},
+    {n:'Jellytips o softgel',p:14,k:'',d:'Alargamiento ligero con tips de gel suave, natural y cómodo.'},
+    {n:'Esmaltado semipermanente vegano',p:10,k:'Vegano',d:'Fórmula libre de ingredientes de origen animal.'}];
+  var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  function render(list){
+    document.getElementById('carta-list').innerHTML=list.map(function(s){
+      return '<li><a href="/reservar?s='+encodeURIComponent(s.n)+'"><span class="row"><span class="nm">'+esc(s.n)+(s.k?'<span class="k">'+esc(s.k)+'</span>':'')+'</span><span class="dots"></span><span class="pr">$'+esc(s.p)+'</span></span><span class="ds">'+esc(s.d||'')+'</span></a></li>';
+    }).join('');
+  }
+  render(S);
+  fetch('/api/config').then(function(r){return r.json();}).then(function(c){ if(c&&c.ok&&Array.isArray(c.services)&&c.services.length) render(c.services); }).catch(function(){});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Madelane Nails · Propuestas de diseño</title>
+<link rel="icon" href="/imagenes/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;800&family=Bodoni+Moda:ital,wght@1,500&family=Instrument+Sans:wght@700&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Epilogue',system-ui,sans-serif;background:#F6F1F8;color:#2E2233;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto;padding:60px 0 80px}
+.head{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.head img{width:64px;height:auto}
+h1{font-weight:800;font-size:clamp(34px,4.6vw,62px);letter-spacing:-.045em;line-height:1;margin:0;max-width:15ch}
+.sub{color:#6A5C70;font-size:17px;line-height:1.6;max-width:38em;margin:16px 0 44px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.c{position:relative;display:flex;flex-direction:column;min-height:460px;border-radius:28px;overflow:hidden;text-decoration:none;transition:transform .25s}
+.c:hover{transform:translateY(-6px)}
+.c:focus-visible{outline:3px solid #2E2233;outline-offset:4px}
+.c .ph{flex:1;min-height:240px;background-size:cover;background-position:center 40%}
+.c .tx{padding:24px 26px 28px}
+.c .n{font-size:13px;font-weight:500;opacity:.7}
+.c h2{margin:8px 0 0;line-height:1;letter-spacing:-.03em}
+.c p{margin:10px 0 0;font-size:15px;line-height:1.55;opacity:.85}
+.c1{background:#fff;color:#2E2233}
+.c1 h2{font-weight:800;font-size:38px}
+.c1 .dots{display:flex;gap:6px;margin-top:14px}
+.c1 .dots i{width:16px;height:24px;border-radius:50% 50% 46% 46%/62% 62% 38% 38%;background:var(--c)}
+.c2{background:#1E1023;color:#F5EEF7}
+.c2 h2{font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500;font-size:46px;background:linear-gradient(100deg,#B79AC2,#F7F0FA 30%,#9C82A6 50%,#fff 65%,#B79AC2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.c3{background:#4B3A50;color:#fff}
+.c3 h2{font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:38px}
+.c3 .ph{position:relative}
+.c3 .ph::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.3)}
+.note{margin-top:30px;color:#6A5C70;font-size:14.5px;line-height:1.6;max-width:44em}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.c{min-height:400px}}
+@media (prefers-reduced-motion:reduce){.c{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="head"><img src="/imagenes/logo.png" alt="Madelane Nails" width="64" height="61"></div>
+  <h1>Tres propuestas para tu nueva web</h1>
+  <p class="sub">Tres estilos distintos con tus servicios, tus precios y fotos reales de tus trabajos. Ábrelos también en el celular y dime cuál te gusta más, o qué te gusta de cada uno.</p>
+  <div class="grid">
+    <a class="c c1" href="1/"><span class="ph" style="background-image:url(img/milky-600.webp)"></span><span class="tx"><span class="n">Diseño 1</span><h2>Tu tono</h2><p>Un muestrario de esmaltes: tocas un color y aparece la foto real de ese trabajo, y la página se tiñe de ese tono.</p><span class="dots" aria-hidden="true"><i style="--c:#EDE3EA"></i><i style="--c:#4A0F1A"></i><i style="--c:#5B3A22"></i><i style="--c:#B3121E"></i><i style="--c:#ECE6A6"></i><i style="--c:#F3DEDF"></i></span></span></a>
+    <a class="c c2" href="2/"><span class="ph" style="background-image:url(img/rojo-gato-600.webp)"></span><span class="tx"><span class="n">Diseño 2</span><h2>Gloss</h2><p>Oscuro y lujoso, como un frasco de esmalte. Letras con brillo cromado y fotos que aparecen como una pincelada de gel.</p></span></a>
+    <a class="c c3" href="3/"><span class="ph" style="background-image:linear-gradient(90deg,transparent 50%,transparent 50%),url(img/despues-600.webp)"></span><span class="tx"><span class="n">Diseño 3</span><h2>Antes y después</h2><p>Claro y práctico. Un deslizador para comparar el antes y el después, y una calculadora para armar la cita y ver el total.</p></span></a>
+  </div>
+  <p class="note">Son propuestas: tu web actual sigue igual. Los botones de agendar llevan a tu agenda en línea de siempre, y los precios se toman de tu panel.</p>
+</main>
+</body>
+</html>

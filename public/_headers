@@ -10,3 +10,6 @@
 /admin*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
+
+/disenos/*
+  X-Robots-Tag: noindex, nofollow
