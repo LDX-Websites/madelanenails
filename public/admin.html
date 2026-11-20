@@ -176,6 +176,10 @@ button.b.fr:hover{border-style:solid;border-color:var(--plum);background:var(--l
 .sec{margin:40px 0 0;padding-top:20px;border-top:1px solid var(--hairline);font:700 12px/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--ash)}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:80;background:var(--ink);color:#fff;padding:12px 20px;border-radius:99px;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:calc(100% - 32px);text-align:center}
 :focus-visible{outline:2px solid var(--plum);outline-offset:2px}
+/* Pantalla de entrada limpia: sin la barra de arriba mientras no hay sesión */
+body:has(#lf) header{display:none}
+body:has(#lf) #app{min-height:100vh;display:flex;align-items:center;justify-content:center}
+body:has(#lf) .login{margin:0 auto}
 </style>
 </head>
 <body>
