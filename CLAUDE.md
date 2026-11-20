@@ -2,7 +2,7 @@
 _Última actualización: 20/11/2026_
 
 ## Dónde está
-- Repo GitHub `shucleleon-spec/madelanenails` (rama `main`). Se publica solo con cada push (worker `madelanenails`: la web en `public/` y el servidor en `src/index.js`, todo junto).
+- Repo GitHub `LDX-Websites/madelanenails` (organización LDX, rama `main`; antes estaba en `shucleleon-spec`). Se publica solo con cada push (worker `madelanenails`: la web en `public/` y el servidor en `src/index.js`, todo junto).
 - PC: `C:\Users\Clement\Documents\web madelanenails\worker\` (los archivos sueltos en la raíz de esa carpeta son una copia vieja; la buena es `worker\`).
 - Base de datos D1 + Resend para correos + Turnstile. Recordatorios y resumen diario por cron (7 p. m. hora de Caracas).
 
