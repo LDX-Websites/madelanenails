@@ -336,13 +336,12 @@ export default {
         const f = await env.DB.prepare("SELECT COUNT(*) n FROM login_attempts WHERE ip=?").bind(ip).first();
         if (f.n >= 8) return out({ ok: false, error: "Demasiados intentos. Espera 15 minutos." }, 429);
         const b = await body();
-        const fail = async () => { await env.DB.prepare("INSERT INTO login_attempts(ip,ts) VALUES(?,?)").bind(ip, Date.now()).run(); return out({ ok: false, error: "Usuario o contraseña incorrectos" }, 401); };
+        const fail = async () => { await env.DB.prepare("INSERT INTO login_attempts(ip,ts) VALUES(?,?)").bind(ip, Date.now()).run(); return out({ ok: false, error: "Contraseña incorrecta" }, 401); };
         if (!env.ADMIN_USER || !env.ADMIN_PASS || !env.SESSION_SECRET) return out({ ok: false, error: "El panel aún no tiene usuario y contraseña configurados en Cloudflare." }, 503);
         if (b.website) { await trapHit(env, ip, "trampa-login"); return fail(); }
         if (!(await human(env, b.turnstile, ip))) return out({ ok: false, error: "No pudimos verificar que eres una persona. Recarga la página e intenta de nuevo." }, 400);
-        const u = eq(await sha(clean(b.user, 80).toLowerCase()), await sha(String(env.ADMIN_USER).toLowerCase()));
         const p = eq(await sha(String(b.pass ?? "")), await sha(String(env.ADMIN_PASS)));
-        if (!u || !p) return fail();
+        if (!p) return fail(); // solo contraseña (el usuario ya no se pide)
         const exp = String(Date.now() + SESSION_HOURS * 36e5);
         return out({ ok: true, token: exp + "." + (await hmac(sessKey(env), "admin|" + exp)) });
       }
