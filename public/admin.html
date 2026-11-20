@@ -191,7 +191,8 @@ button.b.fr:hover{border-style:solid;border-color:var(--plum);background:var(--l
     <label class="f" for="lu">Usuario</label><input class="i" id="lu" autocomplete="username" autocapitalize="none" required>
     <label class="f" for="lp">Contraseña</label><input class="i" id="lp" type="password" autocomplete="current-password" required>
     <div class="hp" aria-hidden="true"><input id="lw" tabindex="-1" autocomplete="off"></div>
-    <button class="btn" type="submit" id="lb" style="width:100%;margin-top:20px">Entrar</button>
+    <div id="lts" style="margin-top:18px;min-height:65px"></div>
+    <button class="btn" type="submit" id="lb" style="width:100%;margin-top:14px">Entrar</button>
     <div class="msg e" id="le" role="alert" hidden></div>
   </form>
 </main>
@@ -225,11 +226,22 @@ async function api(p,o={}){
 const emailNote=e=>e==='sent'?' · correo enviado a la clienta':e==='failed'?' · el correo NO se pudo enviar':'';
 
 // ---------- login ----------
+// Verificación anti-robots (Cloudflare Turnstile) en el login, igual que en las reservas.
+let LTS=null,LKEY='';
+function renderLoginTs(){
+  if(TOK||LTS!==null||!LKEY)return;
+  if(!window.turnstile){setTimeout(renderLoginTs,300);return}
+  LTS=turnstile.render('#lts',{sitekey:LKEY,language:'es',theme:'light',size:'flexible'});
+}
+if(!TOK)fetch('/api/config').then(r=>r.json()).then(c=>{LKEY=c.sitekey||'';if(LKEY){const sc=document.createElement('script');sc.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';sc.async=true;document.head.appendChild(sc);renderLoginTs()}}).catch(()=>{});
 $('lf').addEventListener('submit',async e=>{
-  e.preventDefault();const b=$('lb');b.disabled=true;$('le').hidden=true;
-  const r=await api('/api/login',{method:'POST',body:JSON.stringify({user:$('lu').value.trim(),pass:$('lp').value,website:$('lw').value})});
+  e.preventDefault();$('le').hidden=true;
+  let tok='';
+  if(LKEY){tok=(window.turnstile&&LTS!==null&&turnstile.getResponse(LTS))||'';if(!tok){$('le').textContent='Espera un momento a que termine la verificación anti-robots y vuelve a intentar.';$('le').hidden=false;return}}
+  const b=$('lb');b.disabled=true;
+  const r=await api('/api/login',{method:'POST',body:JSON.stringify({user:$('lu').value.trim(),pass:$('lp').value,website:$('lw').value,turnstile:tok})});
   b.disabled=false;
-  if(!r.ok){$('le').textContent=r.error||'No se pudo entrar';$('le').hidden=false;return}
+  if(!r.ok){if(window.turnstile&&LTS!==null)turnstile.reset(LTS);$('le').textContent=r.error||'No se pudo entrar';$('le').hidden=false;return}
   TOK=r.token;try{localStorage.setItem('mn_tok',TOK)}catch(e){}
   start();
 });

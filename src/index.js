@@ -339,6 +339,7 @@ export default {
         const fail = async () => { await env.DB.prepare("INSERT INTO login_attempts(ip,ts) VALUES(?,?)").bind(ip, Date.now()).run(); return out({ ok: false, error: "Usuario o contraseña incorrectos" }, 401); };
         if (!env.ADMIN_USER || !env.ADMIN_PASS || !env.SESSION_SECRET) return out({ ok: false, error: "El panel aún no tiene usuario y contraseña configurados en Cloudflare." }, 503);
         if (b.website) { await trapHit(env, ip, "trampa-login"); return fail(); }
+        if (!(await human(env, b.turnstile, ip))) return out({ ok: false, error: "No pudimos verificar que eres una persona. Recarga la página e intenta de nuevo." }, 400);
         const u = eq(await sha(clean(b.user, 80).toLowerCase()), await sha(String(env.ADMIN_USER).toLowerCase()));
         const p = eq(await sha(String(b.pass ?? "")), await sha(String(env.ADMIN_PASS)));
         if (!u || !p) return fail();
