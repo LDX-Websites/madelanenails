@@ -3,7 +3,7 @@ _Última actualización: 20/11/2026_
 
 ## Dónde está
 - Repo GitHub `LDX-Websites/madelanenails` (organización LDX, rama `main`; antes estaba en `shucleleon-spec`). Se publica solo con cada push (worker `madelanenails`: la web en `public/` y el servidor en `src/index.js`, todo junto).
-- PC: `C:\Users\Clement\Documents\web madelanenails\worker\` (los archivos sueltos en la raíz de esa carpeta son una copia vieja; la buena es `worker\`).
+- No hay copia en la PC: GitHub es la única versión (web y servidor) y Cloudflare publica desde ahí.
 - Base de datos D1 + Resend para correos + Turnstile. Recordatorios y resumen diario por cron (7 p. m. hora de Caracas).
 
 ## Lo que hay hoy
@@ -25,7 +25,7 @@ _Última actualización: 20/11/2026_
 - Cuentas de negocio: leondigitalexperience@gmail.com. Pagos: solo Stripe.
 - No pulsar "Comenzar gratis" (Google Cloud) ni "Upgrade" (Workers). Todo debe quedar dentro del plan gratis.
 - Firma "Diseñado por LDX" solo con permiso del dueño del negocio, y con el logo de LDX.
-- GitHub (rama `main`) es la versión buena. La carpeta de la PC (`C:\Users\Clement\Documents\web …`) es una copia: al cambiar algo, copiarlo también allí.
+- GitHub (rama `main`) es la única versión de cada web, también de su servidor si tiene uno, y se publica desde ahí. No hay copias en la PC.
 - Nada de bloquear clic derecho, F12 o arrastrar imágenes: no protege nada y molesta (se quitó de todas el 20/11/2026).
 
 ## Seguridad común (revisada el 20/11/2026 con una prueba de ataque)
